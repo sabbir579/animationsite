@@ -1,28 +1,96 @@
-body{
+@keyframes sabbir {
+    from {
+        height: 100px;
+        width: 100px;
+        background-color: blue;
+    }
+    to{
+        height: 300px;
+        width: 300px;
+        background-color: yellow;
+        transform: skew(20deg) rotate(45deg);
+    }
+}
+@keyframes ball{
+    0%{
+        transform: translate(0px);
+    }
+    50%{
+        transform: translate(-640px) translateY(100px);
+    }
+    100%{
+        transform: translate(840px) translateY(-200px);
+    }
+}
+@keyframes bat{
+    from{
+        transform: rotateY(180deg) rotate(-45deg);
+    }
+    to{
+        transform: rotateY(180deg) rotate(45deg);
+    }
+}
+
+@keyframes text{
+    from{
+
+    }
+    to{
+       transform: scale(2);
+        background-color: aqua;
+        color: white;
+    }
+}
+body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.mother{
-   height: 300px;
-    width: 500px;
+
+.mother {
+    height: 300px;
+    width: 900px;
     display: flex;
-    justify-content:center;
+    justify-content: space-between;
     align-items: center;
     /* gap: 20px; */
-    border: 1px solid rgb(255, 68, 0);
+   
     background-color: green;
     transition: 1s;
     transition-timing-function: ease-in;
 }
-.left{
-    height: 100px;
-    width: 100px;
-    background-color: red;
-    border-radius: 50%;
+
+.left {
+    /* height: 100px; */
+    
+    width: 20px;
+   
+    /* background-color: red; */
+
+}
+.left img{
+    transform-origin: top;
+    transform: rotateY(180deg) rotate(-45deg);
+    position: relative;
+    left: 150px;
+    animation: bat 2s ease 1;
+animation-iteration-count: infinite;
+    
+}
+.right{
+    width: 50px;
+    height: 100%;
    
 }
-.mother:hover{
-    background-color: white;
+.right img{
+    animation: ball 2s ease 1;
+    
+   animation-iteration-count: infinite;
+    /* transition: 2s; */
 }
+
+h1{
+    animation: text 1s ease  infinite  ;
+}
+

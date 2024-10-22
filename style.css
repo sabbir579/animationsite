@@ -1,0 +1,28 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mother{
+   height: 300px;
+    width: 500px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    /* gap: 20px; */
+    border: 1px solid rgb(255, 68, 0);
+    background-color: green;
+    transition: 1s;
+    transition-timing-function: ease-in;
+}
+.left{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 50%;
+   
+}
+.mother:hover{
+    background-color: white;
+}
